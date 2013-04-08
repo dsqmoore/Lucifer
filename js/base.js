@@ -19,6 +19,6 @@ function nextSlide() {
 	strip.css('left', -1 * slide * 700 + 'px');
 	slide++;
 	if (slide >= num)
-	   slide = 0;
+		slide = 0;
 }
 var slider = setInterval(nextSlide, 3000);

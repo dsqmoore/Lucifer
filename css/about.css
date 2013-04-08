@@ -1,0 +1,38 @@
+#hold {
+    top: 0;
+    margin-top: 0;
+}
+#content {
+    padding: 0;
+    clear: both;
+}
+
+#people {
+    width: 750px;
+    margin: 30px auto;
+    clear: both;
+}
+.person {
+    width: 160px;
+    height: 160px;
+    display: inline-block;
+    float: left;
+    margin: 0 30px 30px 0;
+    background: #f7f7f7;
+    border-radius: 100%;
+    overflow: hidden;
+    border: 5px solid #EEE;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.person:nth-child(4n) {
+    margin-right: 0;
+}
+.person > img {
+    min-height: 100%;
+    min-width: 100%;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
