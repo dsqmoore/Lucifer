@@ -1,4 +1,4 @@
-html {w
+html {
 	-webkit-animation: fade 1s 1;
 	-o-animation: fade 1s 1;
 	animation: fade 1s 1;
@@ -90,21 +90,6 @@ body {
 	font-rendering: optimizeLegibility;
 	margin: 0;
 }
-#background {
-	position: fixed;
-	width: 100%;
-	height: auto;
-}
-#title {
-	font: 600 4em/1em 'Raleway';
-	color: #FFF;
-	position: fixed;
-	width: 100%;
-	left: 0;
-	padding-left: 30px;
-	text-align: center;
-	bottom: 50%;
-}
 
 nav {
 	position: fixed;
@@ -157,62 +142,9 @@ nav > a:last-child {
 	margin: 0
 }
 
-#hold {
-	position: absolute;
-	top: 100%;
-	left: 0;
-	width: 100%;
-	max-width: 100%;
-	margin-top: -50px;
-	background-color: #fff;
-}
 #content {
 	max-width: 100%;
-	padding: 100px 30px;
-}
-
-/* Work */
-#work {
-	position: relative;
-	width: 100%;
-	height: 500px;
-	text-align: center;
-	margin: 100px 0 0 0;
-	z-index: 2;
-}
-#work > img {
-	position: relative;
-	z-index: 3;
-}
-.slider {
-	display: block;
-	margin: 0 auto;
-	margin-top: -509px;
-	width: 700px;
-	height: 390px;
-	font-size: 0;
-	white-space: nowrap;
-	overflow: hidden;
-}
-.strip {
-	position: relative;
-	display: inline-block;
-	-webkit-transition: left 0.3s ease-out;
-	-moz-transition: left 0.3s ease-out;
-	-ms-transition: left 0.3s ease-out;
-	-o-transition: left 0.3s ease-out;
-	transition: left 0.3s ease-out;
-}
-.slide {
-	width: 700px;
-	height: 390px;
-	display: inline-block;
-	text-align: center;
-}
-.slide > img {
-	width: 100%;
-	height: auto;
-	vertical-align: middle;
+	padding: 0 30px;
 }
 
 .words {
