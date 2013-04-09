@@ -13,6 +13,7 @@
 <body>
     <header>
         <nav>
+            <a href="./" class="back">&#8617;</a>
             <a href="#">About</a>
             <a href="#">Work</a>
             <a href="#">Contact</a>
@@ -48,7 +49,7 @@
     <script>
     $(window).on('load', function() {
         var people = $(".person");
-        
+
         (function shuffle(array) {
             var p, n, tmp;
             for (p = array.length; p;) {
