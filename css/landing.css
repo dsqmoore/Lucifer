@@ -83,9 +83,9 @@
 
     #content {
         float: right;
-        width: 700px;
+        width: 45%;
         margin-top: 100px;
-        margin-right: 5%;
+        margin-right: 3%;
     }
     #about, h1 {
         text-align: justify;
