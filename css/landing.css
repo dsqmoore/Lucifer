@@ -5,13 +5,15 @@
     min-width: 100%;
     min-height: 100%;
 }
+
 #title {
     font: 600 4em/1em 'Raleway';
-    color: #FFF;
+    color: #222;
     position: fixed;
     width: 100%;
     left: 0;
     text-align: center;
+    text-shadow: 0 0 100px #fff;
     bottom: 50%;
 }
 
@@ -25,6 +27,7 @@
     background-color: #fff;
     z-index: 1;
 }
+
 #content {
     padding-top: 30px;
 }
@@ -39,19 +42,24 @@
     z-index: 2;
     overflow: hidden;
 }
+
 .project {
     float: left;
     width: 200px;
     overflow: hidden;
     margin: 15px;
-    border: 5px solid #EEE;
+    border: 5px solid #222;
+
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
     box-sizing: border-box;
 }
+
 .project:nth-child(2) {
     width: 430px;
 }
+
 .project > img {
     width: 100%;
     float: left;
@@ -59,20 +67,24 @@
 
 @media screen and (max-width: 1024px) {
     #background {
-        width: auto;
-        height: 100%;
-    }
-    #title {
-        font-size: 3em;
-        line-height: 1.1em;
-    }
+    width: auto;
+    height: 100%;
+}
+
+#title {
+    font-size: 3em;
+    line-height: 1.1em;
+}
+
 }
 
 @media screen and (max-width: 800px) {
-    #title, #background, #work {
-        display: none;
-    }
-    #hold {
-        top: 0;
-    }
+    #title,#background,#work {
+    display: none;
+}
+
+#hold {
+    top: 0;
+}
+
 }
