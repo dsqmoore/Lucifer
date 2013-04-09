@@ -17,6 +17,7 @@
             <a href="#">About</a>
             <a href="#">Work</a>
             <a href="#">Contact</a>
+            <a href="#" id="home">Codeq</a>
         </nav>
     </header>
     <div id="hold">
@@ -47,24 +48,24 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="js/base.js"></script>
     <script>
+    var people = $(".person");
+
+    (function shuffle(array) {
+        var p, n, tmp;
+        for (p = array.length; p;) {
+            n = Math.random() * p-- | 0;
+            tmp = array[n];
+            array[n] = array[p];
+            array[p] = tmp;
+        }
+    })(people);
+    
     $(window).on('load', function() {
-        var people = $(".person");
-
-        (function shuffle(array) {
-            var p, n, tmp;
-            for (p = array.length; p;) {
-                n = Math.random() * p-- | 0;
-                tmp = array[n];
-                array[n] = array[p];
-                array[p] = tmp;
-            }
-        })(people);
-
         people.each(function (i, el) {
             setTimeout(function () {
                 $(el).addClass("loaded").css("opacity", "1").promise().done(function () {
                     setTimeout(function () {
-                        $(el).removeClass("loaded").addClass("ready");
+                        $(this).removeClass("loaded").addClass("ready");
                     }, 1000);
                 })
             }, i * 200);

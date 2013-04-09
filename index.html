@@ -7,40 +7,28 @@
     <meta charset="utf-8">
     <title>Codeq</title>
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/landing.css">
+    <link rel="stylesheet" href="css/base.min.css">
+    <link rel="stylesheet" href="css/landing.min.css">
 </head>
 <body>
-    <img id="background" src="images/wood/dark.jpg" class="ns" alt="">
-    <div id="title" class="ns">
-        Hello, World.
-    </div>
+    <img id="background" src="images/header.jpg" class="ns" alt="">
+    <div id="title" class="ns"><span>Hello, World.</span></div>
     <header>
         <nav>
             <a href="about.html">About</a>
             <a href="#">Work</a>
             <a href="#">Contact</a>
+            <a href="#" id="home">Codeq</a>
         </nav>
     </header>
     <div id="hold">
         <div id="work" class="ns">
-            <img src="images/work/thunderbolt-display.svg" alt="">
-            <div class="slider">
-                <div class="strip">
-                    <div class="slide">
-                        <img src="images/work/plain.png" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="images/work/helium.png" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="images/work/treyfer.png" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="images/work/turing.png" alt="">
-                    </div>
-                </div>
+            <div class="cell 1r">
+                <img src="images/work/helium.png">
             </div>
+            <div class="cell 2r"><img src="images/work/plain.png"></div>
+            <div class="cell 1r"><img src="images/work/treyfer.png"></div>
+            <div class="cell 1r 2c"><img src="images/work/turing.png"></div>
         </div>
         <div id="content">
             <h1>We are Codeq.</h1>
@@ -53,20 +41,14 @@
         </div>
     </div>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="js/base.js"></script>
     <script>
-    var strip = $('.strip'),
-    slide = 0,
-    num = $('.strip').children().length;
-
-    function nextSlide() {
-        strip.css('left', -1 * slide * 700 + 'px');
-        slide++;
-        if (slide >= num)
-            slide = 0;
-    }
-    var slider = setInterval(nextSlide, 3000);
+    $(document).ready(function() {
+        $("#work .cell.1r").height($(window).width()/4);
+        $("#work .cell.2r").height($(window).width()/2 + 16);
+        $("#work .cell.2c").css("max-width","100%");
+    })
     </script>
 
 </body>
