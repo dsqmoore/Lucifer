@@ -1,50 +1,74 @@
-<!doctype html public>
+<!doctype html>
 <!--[if lt IE 7]> <html lang="en-us" class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>    <html lang="en-us" class="lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>    <html lang="en-us" class="lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en-us"> <!--<![endif]-->
 <head>
-	<meta charset="utf-8">
-	<title>Codeq</title>
-	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" href="css/base.css">
-	<link rel="stylesheet" href="css/about.css">
+    <meta charset="utf-8">
+    <title>Codeq</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/about.css">
 </head>
 <body>
-	<header>
-		<nav>
-			<a href="#">About</a>
-			<a href="#">Work</a>
-			<a href="#">Contact</a>
-		</nav>
-	</header>
-	<div id="hold">
-		<div id="people">
-		    <div class="person"><img src="images/people/abxs.jpg" alt=""></div>
-		    <div class="person"><img src="images/people/mns.jpg" alt=""></div>
-		    <div class="person"><img src="images/people/ags.jpg" alt=""></div>
-		    <div class="person"><img src="" alt=""></div>
-		    <div class="person"><img src="" alt=""></div>
-		    <div class="person"><img src="" alt=""></div>
-		    <div class="person"><img src="" alt=""></div>
-		    <div class="person"><img src="" alt=""></div>
-		    <div class="person"><img src="" alt=""></div>
-		    <div class="person"><img src="" alt=""></div>
-		    <div class="person"><img src="" alt=""></div>
-		</div>
-		<div id="content">
-			<h1>We are Codeq.</h1>
-			<span id="about" class="words">
-				<h2>A design and development team commited to a better web.</h2>
-				<p>
-				Lorem ipsum dolor sit amet, eu nam paulo vitae oratio. Et nec veri equidem. Fastidii platonem ullamcorper his ut, te nibh paulo utroque mel. Cu facilisis splendide sea, ex augue movet eleifend sed. Duis veritus delicatissimi in nam.
-				</p>
-			</span>
-		</div>
-	</div>
+    <header>
+        <nav>
+            <a href="#">About</a>
+            <a href="#">Work</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <div id="hold">
+        <div id="people">
+            <div class="person"><img src="images/people/abxs.jpg" alt=""></div>
+            <div class="person"><img src="images/people/mns.jpg" alt=""></div>
+            <div class="person"><img src="images/people/ags.jpg" alt=""></div>
+            <div class="person"><img src="" alt=""></div>
+            <div class="person"><img src="" alt=""></div>
+            <div class="person"><img src="" alt=""></div>
+            <div class="person"><img src="" alt=""></div>
+            <div class="person"><img src="" alt=""></div>
+            <div class="person"><img src="" alt=""></div>
+            <div class="person"><img src="" alt=""></div>
+            <div class="person"><img src="" alt=""></div>
+        </div>
+        <div id="content">
+            <h1>We are Codeq.</h1>
+            <span id="about" class="words">
+                <h2>A design and development team commited to a better web.</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, eu nam paulo vitae oratio. Et nec veri equidem. Fastidii platonem ullamcorper his ut, te nibh paulo utroque mel. Cu facilisis splendide sea, ex augue movet eleifend sed. Duis veritus delicatissimi in nam.
+                </p>
+            </span>
+        </div>
+    </div>
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script src="js/base.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/base.js"></script>
+    <script>
+    var people = $(".person");
+    
+    (function shuffle(array) {
+            var p, n, tmp;
+            for (p = array.length; p;) {
+                n = Math.random() * p-- | 0;
+                tmp = array[n];
+                array[n] = array[p];
+                array[p] = tmp;
+            }
+    })(people);
+
+    people.each(function (i, el) {
+        setTimeout(function () {
+            console.log(i);
+            $(el).addClass("loaded").css("opacity", "1").promise().done(function () {
+                setTimeout(function () {
+                    $(el).removeClass("loaded").addClass("ready");
+                }, 1000);
+            })
+        }, i * 200);
+    });
+    </script>
 
 </body>
 </html>
