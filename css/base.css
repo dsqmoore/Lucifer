@@ -1,18 +1,18 @@
 @font-face {
     font-family: "Raleway";
     font-weight: 700;
-    src: local("Nonexistent 1442"), url(../fonts/Raleway-Bold-webfont.svg) format("svg");
+    src: local("Nonexistent 1442"), url(../fonts/Raleway-Bold-webfont.svg) format("svg"), local("Arial"), local("Helvetica Neue");
 }
 
 @font-face {
     font-family: "Raleway";
     font-weight: 600;
-    src: local("Nonexistent 1442"), url(../fonts/Raleway-SemiBold-webfont.svg) format("svg");
+    src: local("Nonexistent 1442"), url(../fonts/Raleway-SemiBold-webfont.svg) format("svg"), local("Arial"), local("Helvetica Neue");
 }
 
 @font-face {
     font-family: "Quattrocento";
-    src: local("Nonexistent 1442"), url(../fonts/Quattrocento-Regular-webfont.svg) format("svg");
+    src: local("Nonexistent 1442"), url(../fonts/Quattrocento-Regular-webfont.svg) format("svg"), local("Arial"), local("Helvetica Neue");
 }
 
 html {
@@ -40,15 +40,15 @@ html {
     user-select: none;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway", "Segoe UI", Arial, Helvetica, sans-serif;
+}
+
 h1 {
     clear: left;
     float: left;
     width: 25%;
     text-align: right;
-}
-
-h2 {
-    font-family: 'Raleway';
 }
 
 p {
@@ -73,7 +73,7 @@ a:hover {
 }
 
 body {
-    font-family: 'Raleway', 'Segoe UI', sans-serif;
+    font-family: "Raleway", "Segoe UI", sans-serif;
     -webkit-font-rendering: optimizeLegibility;
     -moz-font-rendering: optimizeLegibility;
     -ms-font-rendering: optimizeLegibility;
@@ -118,7 +118,7 @@ nav {
 nav > a {
     width: 33.33%;
     float: left;
-    font: 700 12pt/50px 'Raleway';
+    font: 700 12pt/50px "Raleway";
     text-align: center;
     text-decoration: none;
     color: #222;
@@ -139,12 +139,29 @@ nav > a:active {
     color: #000;
 }
 
-nav > a:first-child {
+nav > a:first-child, nav > .back + a {
     text-align: left;
 }
 
 nav > a:last-child {
     text-align: right;
+}
+
+nav > .back:first-child {
+    position: absolute;
+    left: -100%;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    margin-top: 13px;
+    margin-left: 13px;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 100%;
+}
+nav > .back:hover {
+    color: #AAA;
 }
 
 #content {
@@ -159,7 +176,7 @@ nav > a:last-child {
     margin-bottom: 1em;
     padding-top: 8px;
     max-width: 33.33%;
-    font: 1em 'Quattrocento', serif;
+    font: 1em "Quattrocento", serif;
 }
 
 @media screen and (max-width: 800px) {
@@ -179,8 +196,11 @@ nav > a:last-child {
         width: 100%;
         left: 0;
     }
-    nav > a, nav > a:first-child, nav > a:last-child {
+    nav > a, nav > .back + a, nav > a:first-child, nav > a:last-child {
         float: left;
         text-align: center;
+    }
+    nav > .back:first-child {
+        left: 0;
     }
 }
