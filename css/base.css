@@ -1,18 +1,18 @@
 @font-face {
-    font-family: "Ralseway";
+    font-family: "Raleway";
     font-weight: 700;
-    src: url("../fonts/Raleway-Bold-webfont.svg") format("svg");
+    src: local("Nonexistent 1442"), url(../fonts/Raleway-Bold-webfont.svg) format("svg");
 }
 
 @font-face {
-    font-family: "Ralseway";
+    font-family: "Raleway";
     font-weight: 600;
-    src: url("../fonts/Raleway-SemiBold-webfont.svg") format("svg");
+    src: local("Nonexistent 1442"), url(../fonts/Raleway-SemiBold-webfont.svg) format("svg");
 }
 
 @font-face {
-    font-family: "Quatttrocento";
-    src: url("../fonts/Quattrocento-Regular-webfont.svg") format("svg");
+    font-family: "Quattrocento";
+    src: local("Nonexistent 1442"), url(../fonts/Quattrocento-Regular-webfont.svg) format("svg");
 }
 
 html {
@@ -48,7 +48,7 @@ h1 {
 }
 
 h2 {
-    font-family: 'Ralseway';
+    font-family: 'Raleway';
 }
 
 p {
@@ -73,7 +73,7 @@ a:hover {
 }
 
 body {
-    font-family: 'Ralseway', 'Segoe UI', sans-serif;
+    font-family: 'Raleway', 'Segoe UI', sans-serif;
     -webkit-font-rendering: optimizeLegibility;
     -moz-font-rendering: optimizeLegibility;
     -ms-font-rendering: optimizeLegibility;
@@ -100,8 +100,8 @@ header {
 nav {
     position: relative;
     color: #222;
-    width: 33%;
-    left: 33%;
+    width: 33.33%;
+    left: 33.33%;
     text-transform: capitalize;
     font-size: 0;
 
@@ -116,11 +116,10 @@ nav {
 }
 
 nav > a {
-    width: 33.3%;
+    width: 33.33%;
     float: left;
-    font: 700 12pt/50px 'Ralseway';
+    font: 700 12pt/50px 'Raleway';
     text-align: center;
-    margin: 0 -15px 0 15px;
     text-decoration: none;
     color: #222;
 
@@ -146,12 +145,11 @@ nav > a:first-child {
 
 nav > a:last-child {
     text-align: right;
-    margin: 0;
 }
 
 #content {
     max-width: 100%;
-    padding: 0 30px 50px 30px;
+    padding: 0 0 50px 0;
 }
 
 .words {
@@ -160,6 +158,6 @@ nav > a:last-child {
     margin: 0 auto;
     margin-bottom: 1em;
     padding-top: 8px;
-    max-width: 33%;
-    font: 1em 'Quatttrocento', serif;
+    max-width: 33.33%;
+    font: 1em 'Quattrocento', serif;
 }

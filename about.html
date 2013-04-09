@@ -23,14 +23,14 @@
             <div class="person"><img src="images/people/abxs.jpg" alt=""></div>
             <div class="person"><img src="images/people/mns.jpg" alt=""></div>
             <div class="person"><img src="images/people/ags.jpg" alt=""></div>
-            <div class="person"><img src="" alt=""></div>
-            <div class="person"><img src="" alt=""></div>
-            <div class="person"><img src="" alt=""></div>
-            <div class="person"><img src="" alt=""></div>
-            <div class="person"><img src="" alt=""></div>
-            <div class="person"><img src="" alt=""></div>
-            <div class="person"><img src="" alt=""></div>
-            <div class="person"><img src="" alt=""></div>
+            <div class="person"><img src="http://placehold.it/150x150" alt=""></div>
+            <div class="person"><img src="http://placehold.it/150x150" alt=""></div>
+            <div class="person"><img src="http://placehold.it/150x150" alt=""></div>
+            <div class="person"><img src="http://placehold.it/150x150" alt=""></div>
+            <div class="person"><img src="http://placehold.it/150x150" alt=""></div>
+            <div class="person"><img src="http://placehold.it/150x150" alt=""></div>
+            <div class="person"><img src="http://placehold.it/150x150" alt=""></div>
+            <div class="person"><img src="http://placehold.it/150x150" alt=""></div>
         </div>
         <div id="content">
             <h1>We are Codeq.</h1>
@@ -46,9 +46,10 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="js/base.js"></script>
     <script>
-    var people = $(".person");
-    
-    (function shuffle(array) {
+    $(window).on('load', function() {
+        var people = $(".person");
+        
+        (function shuffle(array) {
             var p, n, tmp;
             for (p = array.length; p;) {
                 n = Math.random() * p-- | 0;
@@ -56,17 +57,17 @@
                 array[n] = array[p];
                 array[p] = tmp;
             }
-    })(people);
+        })(people);
 
-    people.each(function (i, el) {
-        setTimeout(function () {
-            console.log(i);
-            $(el).addClass("loaded").css("opacity", "1").promise().done(function () {
-                setTimeout(function () {
-                    $(el).removeClass("loaded").addClass("ready");
-                }, 1000);
-            })
-        }, i * 200);
+        people.each(function (i, el) {
+            setTimeout(function () {
+                $(el).addClass("loaded").css("opacity", "1").promise().done(function () {
+                    setTimeout(function () {
+                        $(el).removeClass("loaded").addClass("ready");
+                    }, 1000);
+                })
+            }, i * 200);
+        });
     });
     </script>
 
