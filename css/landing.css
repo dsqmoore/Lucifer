@@ -5,13 +5,15 @@
     min-width: 100%;
     min-height: 100%;
 }
+
 #title {
     font: 600 4em/1em 'Raleway';
-    color: #FFF;
+    color: #222;
     position: fixed;
     width: 100%;
     left: 0;
     text-align: center;
+    text-shadow: 0 0 100px #fff;
     bottom: 50%;
 }
 
@@ -25,52 +27,70 @@
     background-color: #fff;
     z-index: 1;
 }
+
 #content {
-    padding-top: 100px;
+    padding-top: 30px;
 }
 
 /* Work */
 #work {
     position: relative;
-    width: 100%;
+    width: 690px;
     height: 500px;
     text-align: center;
-    margin: 100px 0 0 0;
+    margin: 100px auto 0 auto;
     z-index: 2;
-}
-#work > img {
-    position: relative;
-    z-index: 3;
-}
-.slider {
-    display: block;
-    margin: 0 auto;
-    margin-top: -512px;
-    width: 700px;
-    height: 390px;
-    font-size: 0;
-    white-space: nowrap;
     overflow: hidden;
 }
-.strip {
-    position: relative;
-    display: inline-block;
-    -webkit-transition: left 0.3s ease-out;
-    -moz-transition: left 0.3s ease-out;
-    -ms-transition: left 0.3s ease-out;
-    -o-transition: left 0.3s ease-out;
-    transition: left 0.3s ease-out;
+
+.project {
+    float: left;
+    width: 200px;
+    overflow: hidden;
+    margin: 15px;
+    border: 5px solid #222;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
 }
-.slide {
-    width: 700px;
-    height: 390px;
-    display: inline-block;
-    text-align: center;
+
+.project:nth-child(2) {
+    width: 430px;
 }
-.slide > img {
+
+.project > img {
     width: 100%;
-    height: auto;
-    vertical-align: middle;
+    float: left;
+}
+
+@media screen and (min-width: 1620px) {
+    #hold {
+        padding-bottom: 100px;
+    }
+    #work {
+        float: left;
+        width: 45%;
+        margin-left: 5%;
+    }
+    .project {
+        float: right;
+    }
+    .project:nth-child(2) {
+        width: 300px;
+    }
+
+    #content {
+        float: right;
+        width: 45%;
+        margin-top: 100px;
+        margin-right: 3%;
+    }
+    #about, h1 {
+        text-align: justify;
+        margin-left: 0;
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -78,17 +98,21 @@
         width: auto;
         height: 100%;
     }
+
     #title {
         font-size: 3em;
         line-height: 1.1em;
     }
+
 }
 
 @media screen and (max-width: 800px) {
-    #title, #background, #work {
+    #title,#background,#work {
         display: none;
     }
+
     #hold {
         top: 0;
     }
+
 }
