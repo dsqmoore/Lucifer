@@ -69,10 +69,13 @@
     #hold {
         padding-bottom: 100px;
     }
-    #work {
+    #workholder {
         float: left;
         width: 45%;
         margin-left: 5%;
+    }
+    #work {
+        float: right;
     }
     .project {
         float: right;
