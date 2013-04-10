@@ -73,6 +73,8 @@
 #work .cell > img {
     z-index: 3;
     width: auto;
+    min-height: 100%;
+    min-width: 100%;
 }
 
 #work .cell > article {

@@ -1,7 +1,7 @@
 @font-face{font-family:"Raleway";font-weight:700;src:local("Nonexistent 1442"),url(../fonts/Raleway-Bold-webfont.svg) format("svg"),url(../fonts/Raleway-Bold-webfont.ttf) format("truetype"),local("Arial"),local("Helvetica Neue")}
 @font-face{font-family:"Raleway";font-weight:600;src:local("Nonexistent 1442"),url(../fonts/Raleway-SemiBold-webfont.svg) format("svg"),url(../fonts/Raleway-SemiBold-webfont.ttf) format("truetype"),local("Arial"),local("Helvetica Neue")}
 @font-face{font-family:"Quattrocento";src:local("Nonexistent 1442"),url(../fonts/Quattrocento-Regular-webfont.svg) format("svg"),url(../fonts/Quattrocento-Regular-webfont.ttf) format("truetype"),local("Georgia"),local("Minion Pro"),local("Times New Roman")}
-html{opacity:0}.loaded{opacity:1;-webkit-transition:all .75s ease-in;-moz-transition:all .75s ease-in;-ms-transition:all .75s ease-in;-o-transition:all .75s ease-in;transition:all .75s ease-in}
+.loaded{opacity:1;-webkit-transition:all .75s ease-in;-moz-transition:all .75s ease-in;-ms-transition:all .75s ease-in;-o-transition:all .75s ease-in;transition:all .75s ease-in}
 ::selection{background:#222;color:#FFF}.ns{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}h1,h2,h3,h4,h5,h6{font-family:"Raleway","Segoe UI",Arial,Helvetica,sans-serif}
 h1{text-align:center;margin:0 auto;width:800px;font-size:3em}p{line-height:22px;text-align:justify}a{text-decoration:none;color:#07C}a:hover{background:#07C;color:#FFF}
 body{font-family:"Raleway","Segoe UI",sans-serif;font-size:16px;-webkit-font-rendering:optimizeLegibility;-moz-font-rendering:optimizeLegibility;-ms-font-rendering:optimizeLegibility;-o-font-rendering:optimizeLegibility;font-rendering:optimizeLegibility;margin:0;opacity:0}

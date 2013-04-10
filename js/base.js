@@ -8,6 +8,5 @@ $(window).scroll(function () {
 });
 
 $(window).load(function () {
-	console.log("loaded");
     $('body').addClass("loaded");
 });

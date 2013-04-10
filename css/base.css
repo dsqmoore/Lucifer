@@ -15,10 +15,6 @@
     src: local("Nonexistent 1442"), url(../fonts/Quattrocento-Regular-webfont.svg) format("svg"), url(../fonts/Quattrocento-Regular-webfont.ttf) format("truetype"), local("Georgia"), local("Minion Pro"), local("Times New Roman");
 }
 
-html {
-    opacity: 0;
-}
-
 .loaded {
     opacity: 1;
     -webkit-transition: all 0.75s ease-in;
