@@ -3,7 +3,7 @@
     margin-top: 0;
 }
 #content {
-    /*padding: 0;*/
+    padding-top: 30px;
     clear: both;
 }
 
@@ -11,14 +11,14 @@
     padding: 0 0 20px;
     width: 850px;
     max-width: 100%;
-    margin: 0 auto;
+    margin: 10px auto;
     clear: both;
 }
 .person {
     width: 162px;
     height: 162px;
     float: left;
-    margin: 25px;
+    margin: 20px;
     background: #f7f7f7;
     border-radius: 100%;
     overflow: hidden;

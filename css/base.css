@@ -12,7 +12,20 @@
 
 @font-face {
     font-family: "Quattrocento";
-    src: local("Nonexistent 1442"), url(../fonts/Quattrocento-Regular-webfont.svg) format("svg"), url(../fonts/Quattrocento-Regular-webfont.ttf) format("truetype"), local("Arial"), local("Helvetica Neue");
+    src: local("Nonexistent 1442"), url(../fonts/Quattrocento-Regular-webfont.svg) format("svg"), url(../fonts/Quattrocento-Regular-webfont.ttf) format("truetype"), local("Georgia"), local("Minion Pro"), local("Times New Roman");
+}
+
+html {
+    opacity: 0;
+}
+
+.loaded {
+    opacity: 1;
+    -webkit-transition: all 0.75s ease-in;
+    -moz-transition: all 0.75s ease-in;
+    -ms-transition: all 0.75s ease-in;
+    -o-transition: all 0.75s ease-in;
+    transition: all 0.75s ease-in;
 }
 
 ::selection {
@@ -32,21 +45,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    text-align: left;
+    text-align: center;
     margin: 0px auto;
     width: 800px;
     font-size: 3em;
 }
 
 p {
+    line-height: 22px;
     text-align: justify;
-    -ms-word-wrap: break-word;
-    word-wrap: break-word;
-    -webkit-hyphens: auto;
-    -epub-hyphens: auto;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
 }
 
 a {
@@ -150,8 +157,8 @@ nav > a:last-child {
 }
 
 nav > .back:first-child {
-    position: absolute;
-    left: -100%;
+    position: fixed;
+    left: 0;
     width: 24px;
     height: 24px;
     line-height: 24px;
@@ -196,8 +203,11 @@ nav a.home {
         width: auto;
         text-align: inherit;
     }
+}
+
+@media screen and (max-width: 800px) {
     #content {
-        padding: 0 30px;
+        padding: 0 30px 50px 30px;
     }
     .words {
         max-width: 100%;
