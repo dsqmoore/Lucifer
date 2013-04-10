@@ -103,6 +103,10 @@ nav {
     text-transform: capitalize;
     font-size: 0;
 
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -163,10 +167,11 @@ nav > .back:hover {
     color: #AAA;
 }
 
-nav #home {
+nav a.home {
     text-align: right;
     float: right;
     text-transform: uppercase;
+    margin-right: 0;
 }
 
 #content {
@@ -184,7 +189,7 @@ nav #home {
     font: 1em "Quattrocento", serif;
 }
 
-@media screen and (max-width: 800px) {
+@media print, screen and (max-width: 900px) {
     h1 {
         float: none;
         clear: none;
@@ -200,12 +205,31 @@ nav #home {
     nav {
         width: 100%;
         left: 0;
+        padding: 0 30px;
     }
     nav > a, nav > .back + a, nav > a:first-child, nav > a:last-child {
-        float: left;
         text-align: center;
     }
-    nav > .back:first-child {
+    /* nav > .back:first-child {
         left: 0;
+    } */
+}
+
+@media screen and (max-width: 600px) {
+    nav > a {
+        margin-right: 2em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    nav a.home {
+        display: none;
+    }
+    nav {
+        white-space: nowrap;
+    }
+    nav > a {
+        margin-right: 0;
+        width: 33.3%;
     }
 }
