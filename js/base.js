@@ -7,6 +7,7 @@ $(window).scroll(function () {
     }
 });
 
-$(window).on('load', function () {
-    $('html').addClass('loaded');
+$(window).load(function () {
+	console.log("loaded");
+    $('body').addClass("loaded");
 });
