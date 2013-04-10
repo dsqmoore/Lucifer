@@ -65,7 +65,7 @@
             setTimeout(function () {
                 $(el).addClass("loaded").css("opacity", "1").promise().done(function () {
                     setTimeout(function () {
-                        $(this).removeClass("loaded").addClass("ready");
+                        $(el).removeClass("loaded").addClass("ready");
                     }, 1000);
                 })
             }, i * 200);

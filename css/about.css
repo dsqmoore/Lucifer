@@ -8,8 +8,8 @@
 }
 
 #people {
-    padding: 0 30px;
-    width: 800px;
+    padding: 0 0 20px;
+    width: 860px;
     max-width: 100%;
     margin: 0 auto;
     clear: both;
@@ -44,4 +44,8 @@
     width: 100%;
     position: relative;
     margin: 0 auto;
+}
+
+#content {
+    padding-top: 2em;
 }

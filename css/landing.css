@@ -75,6 +75,7 @@
     z-index: 3;
     opacity: 0.75;
     min-height: 100%;
+    width: auto;
 }
 
 #work .cell > article {
