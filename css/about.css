@@ -9,16 +9,16 @@
 
 #people {
     padding: 0 0 20px;
-    width: 850px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 840px;
     margin: 10px auto;
     clear: both;
 }
 .person {
-    width: 162px;
-    height: 162px;
+    width: 160px;
+    height: 160px;
     float: left;
-    margin: 20px;
+    margin: 25px;
     background: #f7f7f7;
     border-radius: 100%;
     overflow: hidden;
