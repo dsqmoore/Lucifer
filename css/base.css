@@ -65,6 +65,10 @@ a:hover {
     color: #FFF;
 }
 
+a:active {
+    background: #059;
+}
+
 body {
     font-family: "Raleway", "Segoe UI", sans-serif;
     font-size: 16px;

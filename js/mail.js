@@ -1,39 +1,43 @@
-function throwErr($elem) {
-	$elem.css({
-		"background": "#FAFBFF"
-	}).addClass('shake').promise().done(function () {
+function throwErrs() {
+	$("[error='true']")
+	.css("background", "#FAFBFF")
+	.addClass('shake')
+	.promise().done(function () {
 		setTimeout(function () {
 			$('input, textarea').removeClass('shake');
 		}, 400);
 	});
+	$("[error='false']").css("background", "#fff");
 }
 
 function check() {
-	var allGood = true;
 	$("input[type='text'], textarea").each(function() {
 		if (!$(this).val()) {
-			throwErr($(this));
-			allGood = false;
+			$(this).attr('error', 'true');
 		} else {
-			$(this).css({
-				"background": "#fff"
-			});
+			$(this).attr('error', 'false');
 		}
 	});
-	if (allGood) {
-		send();
+	if (!send()) {
+		$('.email').attr('error', 'true');
 	}
+	throwErrs();
 }
 
+/**
+ * Sends POST request to mail.php
+ * @return {Boolean} Whether any errors were thrown
+ */
 function send() {
 	var name	= $("input[name='name']").val(),
-		email	= $("input[name='email']").val(),
+		email	= $(".email").val(),
 		message = $("textarea").val(),
 		params	= "name=" + name + "&email=" + email + "&message=" + message;
 	$.post('mail.php', params, function(data) {
 		if (data !== "true") {
-			throwErr($("input[name='email']"));
-			console.log(data);
+			return false;
+		} else {
+			return true;
 		}
 	});
 }
