@@ -7,8 +7,8 @@
     <meta charset="utf-8">
     <title>Codeq</title>
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="css/base.min.css">
-    <link rel="stylesheet" href="css/landing.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/landing.css">
 </head>
 <body>
     <img id="background" src="images/header.jpg" class="ns" alt="">
@@ -23,12 +23,10 @@
     </header>
     <div id="hold">
         <div id="work" class="ns">
-            <div class="cell 1r">
-                <img src="images/wats.jpg">
-            </div>
-            <div class="cell 2r"><img src="images/working.jpg"></div>
-            <div class="cell 1r"><img src="images/text.png"></div>
-            <div class="cell 1r 2c"><img src="images/inspect.jpg"></div>
+            <div class="cell r1"><img src="images/wats.jpg" class="tall"></div>
+            <div class="cell r1"><img src="images/text.jpg"></div>
+            <div class="cell r2"><img src="images/working.jpg" class="tall"></div>
+            <div class="cell r1 c2"><img src="images/inspect.jpg"></div>
         </div>
         <div id="content">
             <h1>We are Codeq.</h1>
@@ -45,9 +43,8 @@
     <script src="js/base.js"></script>
     <script>
     function masonry() {
-        $("#work .cell.1r").height($("#work").width()/2 - 16);
-        $("#work .cell.2r").height($("#work").width() - 32);
-        $("#work .cell.2c").css("min-width","100%");
+        $("#work .cell.r1").height($("#work").width()/3 - 16);
+        $("#work .cell.r2").height($("#work").width()/3*2 - 32);
     };
 
     $(document).ready(masonry);
