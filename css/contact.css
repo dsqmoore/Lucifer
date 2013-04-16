@@ -1,0 +1,93 @@
+#content {
+	padding-top: 30px;
+}
+
+#contact {
+	max-width: 800px;
+	width: 100%;
+	margin: 30px auto;
+}
+
+#contact td:first-child {
+	border-right: 1px solid #CCC;
+}
+
+#contact td > h3{
+	-webkit-margin-before: 0;
+	-moz-margin-before: 0;
+	-ms-margin-before: 0;
+	-o-margin-before: 0;
+	margin-before: 0;
+	width: 100%;
+}
+
+.form {
+	padding-right: 30px;
+	min-width: 300px;
+}
+
+.form input,.form textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid #EEE;
+	font: 1em "Quattrocento", serif;
+	display: block;
+	outline: none;
+	padding: 10px;
+	margin: 10px 0;
+}
+
+.form input,.form textarea {
+	width: 100%;
+}
+
+.links {
+	max-width: 25%;
+	width: 300px;
+	height: 300px;
+	padding-left: 15px;
+	vertical-align: top;
+}
+
+.links > h3 {
+	text-align: right;
+}
+
+.link {
+	width: 40%;
+	height: 100px;
+	padding: 2.5%;
+	background: red;
+	float: left;
+	margin-bottom: 5%;
+}
+
+.link:nth-child(even) {
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+@media screen and (max-width: 900px) {
+	#contact td {
+		display: block;
+	}
+	#contact td:first-child {
+		border-right: none;
+		border-bottom: 1px solid #EEE;
+	}
+	.form {
+		padding: 0;
+		min-width: 0;
+	}
+	.links {
+		padding-top: 20px;
+		width: 100%;
+		max-width: 100%;
+	}
+}

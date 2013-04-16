@@ -12,7 +12,8 @@
     position: fixed;
     width: 100%;
     margin: -1em auto 0;
-    text-align: left;
+    text-align: center;
+    text-shadow: 0 0 70px #fff;
     top: 50%;
 }
 
@@ -33,15 +34,11 @@
     z-index: 1;
 }
 
-#content {
-    padding-top: 30px;
-}
-
 /* Work */
 #work {
     width: 800px;
     overflow-x: hidden;
-    margin: 50px auto 0;
+    margin: 50px auto;
     text-align: center;
     z-index: 2;
 }
@@ -183,7 +180,7 @@
 
     #hold {
         top: 0;
-        margin-top: 0;
+        margin-top: 20px;
     }
 
 }

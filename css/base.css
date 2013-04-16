@@ -16,11 +16,14 @@
 }
 
 .loaded {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
     opacity: 1;
+
     -webkit-transition: all 0.75s ease-in;
     -moz-transition: all 0.75s ease-in;
-    -ms-transition: all 0.75s ease-in;
     -o-transition: all 0.75s ease-in;
+    -ms-transition: all 0.75s ease-in;
     transition: all 0.75s ease-in;
 }
 
@@ -36,7 +39,7 @@
     user-select: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,h2,h3,h4,h5,h6 {
     font-family: "Raleway", "Segoe UI", Arial, Helvetica, sans-serif;
 }
 
@@ -70,16 +73,25 @@ body {
     -ms-font-rendering: optimizeLegibility;
     -o-font-rendering: optimizeLegibility;
     font-rendering: optimizeLegibility;
+    -webkit-font-feature-settings: "lnum", "dlig", "liga";
+    -moz-font-feature-settings: "lnum", "dlig", "liga";
+    -ms-font-feature-settings: "lnum", "dlig", "liga";
+    font-feature-settings: "lnum", "dlig", "liga";
     margin: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
     opacity: 0;
 }
 
 .loaded {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
     opacity: 1;
+
     -webkit-transition: opacity 0.5s ease;
     -moz-transition: opacity 0.5s ease;
-    -ms-transition: opacity 0.5s ease;
     -o-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
     transition: opacity 0.5s ease;
 }
 
@@ -106,9 +118,10 @@ nav {
     text-transform: capitalize;
     font-size: 0;
 
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
 
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -144,30 +157,12 @@ nav > a:active {
     color: #000;
 }
 
-nav > a:first-child, nav > .back + a {
+nav > a:first-child,nav > .back + a {
     text-align: left;
 }
 
 nav > a:last-child {
     text-align: right;
-}
-
-nav > .back:first-child {
-    position: fixed;
-    left: 0;
-    width: 24px;
-    height: 24px;
-    line-height: 24px;
-    margin-top: 13px;
-    margin-left: 13px;
-    background: #333;
-    color: #fff;
-    text-align: center;
-    border-radius: 100%;
-}
-
-nav > .back:hover {
-    color: #AAA;
 }
 
 nav a.home {
@@ -192,50 +187,56 @@ nav a.home {
     font: 1em "Quattrocento", serif;
 }
 
-@media print, screen and (max-width: 900px) {
+@media print,screen and (max-width: 900px) {
     h1 {
-        float: none;
-        clear: none;
-        width: auto;
-        text-align: inherit;
-    }
+    float: none;
+    clear: none;
+    width: auto;
+    text-align: inherit;
+}
+
+#content {
+    padding: 0 30px 50px 30px;
+}
+
 }
 
 @media screen and (max-width: 800px) {
-    #content {
-        padding: 0 30px 50px 30px;
-    }
     .words {
-        max-width: 100%;
-    }
-    nav {
-        width: 100%;
-        left: 0;
-        padding: 0 30px;
-    }
-    nav > a, nav > .back + a, nav > a:first-child, nav > a:last-child {
-        text-align: center;
-    }
-    /* nav > .back:first-child {
-        left: 0;
-    } */
+    max-width: 100%;
+}
+
+nav {
+    width: 100%;
+    left: 0;
+    padding: 0 30px;
+}
+
+nav > a,nav > .back + a,nav > a:first-child,nav > a:last-child {
+    text-align: center;
+}
+
 }
 
 @media screen and (max-width: 600px) {
     nav > a {
-        margin-right: 2em;
-    }
+    margin-right: 2em;
+}
+
 }
 
 @media screen and (max-width: 400px) {
     nav a.home {
-        display: none;
-    }
-    nav {
-        white-space: nowrap;
-    }
-    nav > a {
-        margin-right: 0;
-        width: 33.3%;
-    }
+    display: none;
+}
+
+nav {
+    white-space: nowrap;
+}
+
+nav > a {
+    margin-right: 0;
+    width: 33.3%;
+}
+
 }
