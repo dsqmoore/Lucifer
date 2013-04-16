@@ -1,99 +1,99 @@
 #content {
-	padding-top: 30px;
+    padding-top: 30px;
 }
 
 #contact {
-	max-width: 800px;
-	width: 100%;
-	margin: 30px auto;
+    max-width: 800px;
+    width: 100%;
+    margin: 30px auto;
 }
 
 #contact td:first-child {
-	border-right: 1px solid #CCC;
+    border-right: 1px solid #CCC;
 }
 
 #contact td > h3 {
-	-webkit-margin-before: 0;
-	-moz-margin-before: 0;
-	-ms-margin-before: 0;
-	-o-margin-before: 0;
-	margin-before: 0;
-	width: 100%;
+    -webkit-margin-before: 0;
+    -moz-margin-before: 0;
+    -ms-margin-before: 0;
+    -o-margin-before: 0;
+    margin-before: 0;
+    width: 100%;
 }
 
 .form {
-	padding-right: 30px;
-	min-width: 300px;
+    padding-right: 30px;
+    min-width: 300px;
 }
 
 .form input,.form textarea {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	box-sizing: border-box;
-	border: 1px solid #EEE;
-	font: 1em "Quattrocento", serif;
-	display: block;
-	outline: none;
-	padding: 10px;
-	margin: 10px 0;
-	position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #EEE;
+    font: 1em "Quattrocento", serif;
+    display: block;
+    outline: none;
+    padding: 10px;
+    margin: 10px 0;
+    position: relative;
 }
 
 .form input,.form textarea {
-	width: 100%;
+    width: 100%;
 }
 
 .form input.submit {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 .form input.submit:hover {
-	background: #07C;
-	color: #FFF;
+    background: #07C;
+    color: #FFF;
 }
 
 .form input.submit:active {
-	background: #059;
+    background: #059;
 }
 
 .links {
-	max-width: 25%;
-	width: 300px;
-	height: 300px;
-	padding-left: 15px;
-	vertical-align: top;
+    max-width: 25%;
+    width: 300px;
+    height: 300px;
+    padding-left: 15px;
+    vertical-align: top;
 }
 
 .links > h3 {
-	text-align: right;
+    text-align: right;
 }
 
 .link {
-	width: 40%;
-	height: 100px;
-	padding: 2.5%;
-	background: #EEE;
-	font-family: "Quattrocento", serif;
-	float: left;
-	margin-bottom: 5%;
-	text-align: center;
+    width: 40%;
+    height: 100px;
+    padding: 2.5%;
+    background: #EEE;
+    font-family: "Quattrocento", serif;
+    float: left;
+    margin-bottom: 5%;
+    text-align: center;
 }
 
 .link:nth-child(even) {
-	margin: 0 5%;
+    margin: 0 5%;
 }
 
 .shake {
-	-webkit-animation: shake 0.2s ease 2;
-	-moz-animation: shake 0.2s ease 2;
-	-ms-animation: shake 0.2s ease 2;
-	-o-animation: shake 0.2s ease 2;
-	animation: shake 0.2s ease 2;
+    -webkit-animation: shake 0.2s ease 2;
+    -moz-animation: shake 0.2s ease 2;
+    -ms-animation: shake 0.2s ease 2;
+    -o-animation: shake 0.2s ease 2;
+    animation: shake 0.2s ease 2;
 }
 
 @keyframes "shake" {
@@ -177,34 +177,34 @@
 }
 
 @media screen and (max-width: 900px) {
-	#contact td {
-	display: block;
+    #contact td {
+    display: block;
 }
 
 #contact td:first-child {
-	border-right: none;
-	border-bottom: 1px solid #EEE;
+    border-right: none;
+    border-bottom: 1px solid #EEE;
 }
 
 .form {
-	padding: 0 0 20px 0;
-	min-width: 0;
+    padding: 0 0 20px 0;
+    min-width: 0;
 }
 
 .links {
-	padding-top: 20px;
-	width: 100%;
-	max-width: 100%;
-	padding-left: 0;
+    padding-top: 20px;
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
 }
 
 .link {
-	margin-bottom: 10%;
+    margin-bottom: 10%;
 }
 
 .link:nth-child(even) {
-	margin-right: 10%;
-	margin-left: 0;
+    margin-right: 10%;
+    margin-left: 0;
 }
 
 }

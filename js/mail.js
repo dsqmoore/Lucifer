@@ -1,49 +1,59 @@
 function throwErrs() {
-	$("[error='true']")
-	.css("background", "#FAFBFF")
-	.addClass('shake')
-	.promise().done(function () {
-		setTimeout(function () {
-			$('input, textarea').removeClass('shake');
-		}, 400);
-	});
-	$("[error='false']").css("background", "#fff");
+    $("[error='true']")
+    .css("background", "#FAFBFF")
+    .addClass('shake')
+    .promise().done(function () {
+        setTimeout(function () {
+            $('input, textarea').removeClass('shake');
+        }, 400);
+    });
+    $("[error='false']").css("background", "#fff");
 }
 
 function check() {
-	$("input[type='text'], textarea").each(function() {
-		if (!$(this).val()) {
-			$(this).attr('error', 'true');
-		} else {
-			$(this).attr('error', 'false');
-		}
-	});
-	if (!send()) {
-		$('.email').attr('error', 'true');
-	}
-	throwErrs();
+    $("input[type='text'], textarea").each(function() {
+        if (!$(this).val()) {
+            $(this).attr('error', 'true');
+        } else {
+            $(this).attr('error', 'false');
+        }
+    });
+    send();
 }
 
-/**
- * Sends POST request to mail.php
- * @return {Boolean} Whether any errors were thrown
- */
 function send() {
-	var name	= $("input[name='name']").val(),
-		email	= $(".email").val(),
-		message = $("textarea").val(),
-		params	= "name=" + name + "&email=" + email + "&message=" + message;
-	$.post('mail.php', params, function(data) {
-		if (data !== "true") {
-			return false;
-		} else {
-			return true;
-		}
-	});
+    var name    = $("input[name='name']").val(),
+        email   = $(".email").val(),
+        message = $("textarea").val(),
+        params  = "name=" + name + "&email=" + email + "&message=" + message,
+        result;
+    $.post('mail.php', params, function(data) {
+        if (data !== "true") {
+            var index = data.indexOf("Message was not sent");
+            if (index !== -1) {
+                alert("An error occurred, and the message was not sent");
+                result = true;
+            } else {
+                console.log("returned false");
+                result = false;
+            }
+        } else {
+            result = true;
+        }
+
+        if (result) {
+            $('.email').attr('error', 'false');
+        } else {
+            $('.email').attr('error', 'true');
+        }
+
+        throwErrs();
+
+    });
 }
 
 function resize() {
-	$(".link").height($(".link").width()).css("line-height", $(".link").width() + "px");
+    $(".link").height($(".link").width()).css("line-height", $(".link").width() + "px");
 }
 
 $(document).ready(resize);
