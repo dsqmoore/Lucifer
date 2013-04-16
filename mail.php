@@ -16,7 +16,7 @@
         echo "false";
         return;
     } else if (!$name || !$message) {
-        echo "but with empty fields";
+        echo "true";
         return;
     } else {
         echo "true";

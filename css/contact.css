@@ -61,6 +61,13 @@
     background: #059;
 }
 
+.form input:disabled, .form input:disabled:hover, .form textarea:disabled {
+    background: #FAFAFA;
+    opacity: 0.5;
+    color: #555;
+    cursor: default;
+}
+
 .links {
     max-width: 25%;
     width: 300px;

@@ -27,8 +27,15 @@ function send() {
         message = $("textarea").val(),
         params  = "name=" + name + "&email=" + email + "&message=" + message,
         result;
-    try {
-        $.post('mail.php', params, function(data) {
+
+    // Disable the inputs while loading
+    $('input, textarea').attr('disabled', 'true');
+
+    $.ajax({
+        type: "POST",
+        url: "mail.php",
+        data: params,
+        success: function(data) {
             if (data !== "true") {
                 var index = data.indexOf("Message was not sent");
                 if (index !== -1) {
@@ -48,13 +55,15 @@ function send() {
                 $('.email').attr('error', 'true');
             }
 
+            $('input, textarea').removeAttr('disabled');
             throwErrs();
-
-        });
-    } catch (err) {
-        alert("An error occurred.");
-        console.log(err);
-    }
+        },
+        error: function(err) {
+            $('input, textarea').removeAttr('disabled');
+            alert("An error occurred.");
+            console.log(err);
+        }
+    });
 }
 
 function resize() {
