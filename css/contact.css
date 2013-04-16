@@ -97,6 +97,7 @@ form {
     margin-bottom: 5%;
     text-align: center;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .link:nth-child(even) {
