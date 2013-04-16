@@ -12,7 +12,7 @@
 	border-right: 1px solid #CCC;
 }
 
-#contact td > h3{
+#contact td > h3 {
 	-webkit-margin-before: 0;
 	-moz-margin-before: 0;
 	-ms-margin-before: 0;
@@ -41,10 +41,20 @@
 	outline: none;
 	padding: 10px;
 	margin: 10px 0;
+	position: relative;
 }
 
 .form input,.form textarea {
 	width: 100%;
+}
+
+.form input.submit {
+	cursor: pointer;
+}
+
+.form input.submit:hover {
+	background: #07C;
+	color: #FFF;
 }
 
 .links {
@@ -63,31 +73,134 @@
 	width: 40%;
 	height: 100px;
 	padding: 2.5%;
-	background: red;
+	background: #EEE;
+	font-family: "Quattrocento", serif;
 	float: left;
 	margin-bottom: 5%;
+	text-align: center;
 }
 
 .link:nth-child(even) {
-	margin-right: 5%;
-	margin-left: 5%;
+	margin: 0 5%;
+}
+
+.shake {
+	-webkit-animation: shake 0.2s ease 2;
+	-moz-animation: shake 0.2s ease 2;
+	-ms-animation: shake 0.2s ease 2;
+	-o-animation: shake 0.2s ease 2;
+	animation: shake 0.2s ease 2;
+}
+
+@keyframes "shake" {
+ from {
+    left: 0;
+ }
+ 25% {
+    left: -10px;
+ }
+ 75% {
+    left: 20px;
+ }
+ to {
+    left: 0;
+ }
+
+}
+
+@-moz-keyframes shake {
+ from {
+   left: 0;
+ }
+ 25% {
+   left: -10px;
+ }
+ 75% {
+   left: 20px;
+ }
+ to {
+   left: 0;
+ }
+
+}
+
+@-webkit-keyframes "shake" {
+ from {
+   left: 0;
+ }
+ 25% {
+   left: -10px;
+ }
+ 75% {
+   left: 20px;
+ }
+ to {
+   left: 0;
+ }
+
+}
+
+@-ms-keyframes "shake" {
+ from {
+   left: 0;
+ }
+ 25% {
+   left: -10px;
+ }
+ 75% {
+   left: 20px;
+ }
+ to {
+   left: 0;
+ }
+
+}
+
+@-o-keyframes "shake" {
+ from {
+   left: 0;
+ }
+ 25% {
+   left: -10px;
+ }
+ 75% {
+   left: 20px;
+ }
+ to {
+   left: 0;
+ }
+
 }
 
 @media screen and (max-width: 900px) {
 	#contact td {
-		display: block;
-	}
-	#contact td:first-child {
-		border-right: none;
-		border-bottom: 1px solid #EEE;
-	}
-	.form {
-		padding: 0;
-		min-width: 0;
-	}
-	.links {
-		padding-top: 20px;
-		width: 100%;
-		max-width: 100%;
-	}
+	display: block;
+}
+
+#contact td:first-child {
+	border-right: none;
+	border-bottom: 1px solid #EEE;
+}
+
+.form {
+	padding: 0 0 20px 0;
+	min-width: 0;
+}
+
+.links {
+	padding-top: 20px;
+	width: 100%;
+	max-width: 100%;
+	padding-left: 0;
+}
+
+.link {
+	margin-bottom: 10%;
+}
+
+.link:nth-child(even) {
+	margin-right: 10%;
+	margin-left: 0;
+}
+
 }

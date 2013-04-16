@@ -25,19 +25,17 @@
             <tr>
                 <td class="form">
                     <h3>Fill out this form ...</h3>
-                    <form action="mail.php" method="post">
-                        <input type="text" name="name" placeholder="Name">
-                        <input type="text" name="email" placeholder="Email">
-                        <textarea name="body" cols="30" rows="10" placeholder="Message"></textarea>
-                        <input type="submit" value="Notify us">
-                    </form>
+                    <input type="text" name="name" placeholder="Name">
+                    <input type="text" name="email" placeholder="Email">
+                    <textarea name="body" cols="30" rows="10" placeholder="Message"></textarea>
+                    <input type="submit" class="submit" value="Notify us" onclick="check()">
                 </td>
                 <td class="links">
                     <h3>... Or you can contact us directly</h3>
-                    <div class="link">Email</div>
-                    <div class="link">g+</div>
-                    <div class="link">in</div>
-                    <div class="link">FB</div>
+                    <a class="link" href="#">Email</a>
+                    <a class="link" href="#">Google +</a>
+                    <a class="link" href="#">LinkedIn</a>
+                    <a class="link" href="#">Post</a>
                 </td>
             </tr>
         </table>
@@ -45,5 +43,6 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="js/hyphenator.js"></script>
     <script src="js/base.js"></script>
+    <script src="js/mail.js"></script>
 </body>
 </html>
