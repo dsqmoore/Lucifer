@@ -27,29 +27,34 @@ function send() {
         message = $("textarea").val(),
         params  = "name=" + name + "&email=" + email + "&message=" + message,
         result;
-    $.post('mail.php', params, function(data) {
-        if (data !== "true") {
-            var index = data.indexOf("Message was not sent");
-            if (index !== -1) {
-                alert("An error occurred, and the message was not sent");
-                result = true;
+    try {
+        $.post('mail.php', params, function(data) {
+            if (data !== "true") {
+                var index = data.indexOf("Message was not sent");
+                if (index !== -1) {
+                    alert("An error occurred, and the message was not sent");
+                    result = true;
+                } else {
+                    console.log("returned false");
+                    result = false;
+                }
             } else {
-                console.log("returned false");
-                result = false;
+                result = true;
             }
-        } else {
-            result = true;
-        }
 
-        if (result) {
-            $('.email').attr('error', 'false');
-        } else {
-            $('.email').attr('error', 'true');
-        }
+            if (result) {
+                $('.email').attr('error', 'false');
+            } else {
+                $('.email').attr('error', 'true');
+            }
 
-        throwErrs();
+            throwErrs();
 
-    });
+        });
+    } catch (err) {
+        alert("An error occurred.");
+        console.log(err);
+    }
 }
 
 function resize() {
