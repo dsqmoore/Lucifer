@@ -29,7 +29,7 @@
         if (mail($to,$subject,$message,$headers)) {
             return;
         } else {
-            echo "Message was not sent";
+            die("Message was not sent");
         }
     }
 

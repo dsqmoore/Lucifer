@@ -36,17 +36,20 @@ function send() {
         url: "mail.php",
         data: params,
         success: function(data) {
-            if (data !== "true") {
+            console.log(data);
+            if (data !== "true" && data !== "sent") {
                 var index = data.indexOf("Message was not sent");
                 if (index !== -1) {
                     alert("An error occurred, and the message was not sent");
                     result = true;
                 } else {
-                    console.log("returned false");
                     result = false;
                 }
-            } else {
+            } else if (data === "true") {
                 result = true;
+            } else if (data === "sent") {
+                result = true;
+                alert('Message was sent!');
             }
 
             if (result) {
@@ -66,9 +69,21 @@ function send() {
     });
 }
 
+function popup() {
+    $(".pop").show();
+}
+
 function resize() {
     $(".link").height($(".link").width()).css("line-height", $(".link").width() + "px");
 }
 
 $(document).ready(resize);
 $(window).resize(resize);
+
+$(".mailto").on("mouseover", function () {
+    $(this).attr("href", window.atob("bWFpbHRvOmluZm9AY29kZXEuY2E="));
+});
+
+$(".overlay").on("click", function () {
+    $(".pop").hide();
+});
