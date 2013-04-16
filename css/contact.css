@@ -12,13 +12,19 @@
     border-right: 1px solid #CCC;
 }
 
-#contact td > h3 {
+#contact h3 {
     -webkit-margin-before: 0;
     -moz-margin-before: 0;
     -ms-margin-before: 0;
     -o-margin-before: 0;
     margin-before: 0;
+    margin-top: 0;
     width: 100%;
+}
+
+form {
+    margin: 0;
+    padding: 0;
 }
 
 .form {
@@ -42,6 +48,7 @@
     padding: 10px;
     margin: 10px 0;
     position: relative;
+    resize: none;
 }
 
 .form input,.form textarea {
@@ -89,6 +96,7 @@
     float: left;
     margin-bottom: 5%;
     text-align: center;
+    cursor: pointer;
 }
 
 .link:nth-child(even) {
@@ -206,6 +214,7 @@
     -ms-margin-before: 0;
     -o-margin-before: 0;
     margin-before: 0;
+    margin-top: 0;
 }
 
 .post p {
@@ -316,13 +325,25 @@
     padding-left: 0;
 }
 
+.links > h3 {
+    text-align: left;
+}
+
 .link {
-    margin-bottom: 10%;
+    margin: 3.333%;
+    width: 15%;
 }
 
 .link:nth-child(even) {
-    margin-right: 10%;
+    margin: 3.333%;
+}
+
+.link:nth-child(2) {
     margin-left: 0;
+}
+
+.link:last-child {
+    margin-right: 0;
 }
 
 }
