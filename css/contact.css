@@ -280,8 +280,8 @@ form {
     height: 20px;
     left: 28px;
     bottom: 32px;
-    background: red;
-    box-shadow: -2px 2px 10px rgba(0,0,0,0.05);
+    background: transparent;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
     z-index: -1;
     -webkit-transform: skewY(-3deg);
     -moz-transform: skewY(-3deg);
