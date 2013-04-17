@@ -11,29 +11,26 @@
     <link rel="stylesheet" href="css/landing.css">
 </head>
 <body>
-    <img id="background" src="images/event/DSC_0151.jpg" class="ns" alt="">
-    <div id="title" class="ns">
-        Hello, World.
-    </div>
+    <img id="background" src="images/header.jpg" class="ns" alt="">
+    <div id="title" class="ns"><span>Hello World</span></div>
     <header>
         <nav>
             <a href="about.html">About</a>
             <a href="#">Work</a>
-            <a href="#">Contact</a>
+            <a href="contact.html">Contact</a>
+            <a href="./" class="home">Codeq</a>
         </nav>
     </header>
     <div id="hold">
         <div id="work" class="ns">
-            <div class="project"><img src="images/work/helium.png" alt=""></div>
-            <div class="project"><img src="images/work/plain.png" alt=""></div>
-            <div class="project"><img src="images/event/DSC_0161.jpg" alt=""></div>
-            <div class="project"><img src="images/work/treyfer.png" alt=""></div>
-            <div class="project"><img src="images/event/DSC_0189.jpg" alt=""></div>
-            <div class="project"><img src="images/work/turing.png" alt=""></div>
+            <div class="cell r1"><img src="images/wats.jpg" class="tall"></div>
+            <div class="cell r1"><img src="images/text.jpg"></div>
+            <div class="cell r2"><img src="images/working.jpg" class="tall"></div>
+            <div class="cell r1 c2"><img src="images/inspect.jpg"></div>
         </div>
         <div id="content">
-            <h1>We are Codeq.</h1>
             <span id="about" class="words hyphenate">
+                <h1>We are Codeq.</h1>
                 <h2>A design and development team commited to a better web.</h2>
                 <p>
                     Lorem ipsum dolor sit amet, eu nam paulo vitae oratio. Et nec veri equidem. Fastidii platonem ullamcorper his ut, te nibh paulo utroque mel. Cu facilisis splendide sea, ex augue movet eleifend sed. Duis veritus delicatissimi in nam.
@@ -42,19 +39,19 @@
         </div>
     </div>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="js/hyphenator.js"></script>
-    <script src="js/masonry.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="js/base.js"></script>
     <script>
-    $(window).on('load', function () {
-        $('#work').masonry({
-            itemSelector: '.project',
-            columnWidth: 230,
-            isRTL: true
-        });
-    });
-    </script>
+    function masonry() {
+        $("#work .cell.r1").height($("#work").width()/3 - 16);
+        $("#work .cell.r2").height($("#work").width()/3*2 - 32);
+    };
 
+    $(document).ready(masonry);
+    $(window).resize(masonry);
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/hyphenator.js"></script>
+    <script src="js/base.js"></script>
 </body>
 </html>

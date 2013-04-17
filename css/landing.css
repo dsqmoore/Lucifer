@@ -11,10 +11,16 @@
     color: #222;
     position: fixed;
     width: 100%;
-    left: 0;
+    margin: -1em auto 0;
     text-align: center;
-    text-shadow: 0 0 100px #fff;
-    bottom: 50%;
+    text-shadow: 0 0 70px #fff;
+    top: 50%;
+}
+
+#title span {
+    display: block;
+    width: 800px;
+    margin: 0 auto;
 }
 
 #hold {
@@ -28,12 +34,72 @@
     z-index: 1;
 }
 
-#content {
-    padding-top: 30px;
-}
-
 /* Work */
 #work {
+    width: 800px;
+    overflow-x: hidden;
+    margin: 50px auto;
+    text-align: center;
+    z-index: 2;
+}
+
+#work .row {
+    max-height: 50%;
+    overflow: hidden;
+}
+
+#work .cell {
+    display: inline-block;
+    max-width: 33.33%;
+    overflow: hidden;
+    float: left;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 1em solid #FFFFFF;
+    border-left: none;
+    border-bottom: none;
+    position: relative;
+}
+
+#work .cell:nth-child(3n) {
+    float: right;
+    border-right: none;
+}
+
+#work .cell.c2 {
+    min-width: 66.666%;
+}
+
+#work .cell > img {
+    z-index: 3;
+    width: auto;
+    height: 100%;
+    min-width: 100%;
+}
+
+#work .cell > img.tall {
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+}
+
+#work .cell > article {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: -100%;
+    background: rgba(255,255,255,0.75);
+
+    -webkit-transition: 0.2s bottom ease;
+    -moz-transition: 0.2s bottom ease;
+    -ms-transition: 0.2s bottom ease;
+    -o-transition: 0.2s bottom ease;
+    transition: 0.2s bottom ease;
+}
+
+#work .cell:hover > article {
+    bottom: 0;
     position: relative;
     width: 690px;
     height: 500px;
@@ -83,13 +149,14 @@
 
     #content {
         float: right;
-        width: 45%;
+        width: 44%;
         margin-top: 100px;
         margin-right: 3%;
     }
     #about, h1 {
         text-align: justify;
         margin-left: 0;
+        width: 100%;
     }
 }
 
@@ -106,13 +173,14 @@
 
 }
 
-@media screen and (max-width: 800px) {
-    #title,#background,#work {
+@media screen and (max-width: 900px) {
+    #title, #background, #work {
         display: none;
     }
 
     #hold {
         top: 0;
+        margin-top: 20px;
     }
 
 }

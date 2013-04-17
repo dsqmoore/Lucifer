@@ -8,16 +8,17 @@
 }
 
 #people {
-    width: 720px;
-    max-width: 100%;
+    padding: 0 0 20px;
+    width: 100%;
+    max-width: 840px;
     margin: 10px auto;
     clear: both;
 }
 .person {
-    width: 140px;
-    height: 140px;
+    width: 160px;
+    height: 160px;
     float: left;
-    margin: 20px;
+    margin: 25px;
     background: #f7f7f7;
     border-radius: 100%;
     overflow: hidden;
@@ -43,4 +44,8 @@
     width: 100%;
     position: relative;
     margin: 0 auto;
+}
+
+#content {
+    padding-top: 2em;
 }

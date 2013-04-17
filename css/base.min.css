@@ -1,2 +1,18 @@
-body{background:url(../images/wood/dark.jpg) center/cover fixed}nav{position:fixed;bottom:0;color:#fff;font:700 1.5em/70px 'Lato';text-transform:uppercase}
-nav>span{margin:0 20px}
+@font-face{font-family:"Raleway";font-weight:700;src:local("Nonexistent 1442"),url(../fonts/Raleway-Bold-webfont.svg) format("svg"),url(../fonts/Raleway-Bold-webfont.ttf) format("truetype"),local("Arial"),local("Helvetica Neue")}
+@font-face{font-family:"Raleway";font-weight:600;src:local("Nonexistent 1442"),url(../fonts/Raleway-SemiBold-webfont.svg) format("svg"),url(../fonts/Raleway-SemiBold-webfont.ttf) format("truetype"),local("Arial"),local("Helvetica Neue")}
+@font-face{font-family:"Quattrocento";src:local("Nonexistent 1442"),url(../fonts/Quattrocento-Regular-webfont.svg) format("svg"),url(../fonts/Quattrocento-Regular-webfont.ttf) format("truetype"),local("Georgia"),local("Minion Pro"),local("Times New Roman")}
+.loaded{opacity:1;-webkit-transition:all .75s ease-in;-moz-transition:all .75s ease-in;-ms-transition:all .75s ease-in;-o-transition:all .75s ease-in;transition:all .75s ease-in}
+::selection{background:#222;color:#FFF}.ns{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}h1,h2,h3,h4,h5,h6{font-family:"Raleway","Segoe UI",Arial,Helvetica,sans-serif}
+h1{text-align:center;margin:0 auto;width:800px;font-size:3em}p{line-height:22px;text-align:justify}a{text-decoration:none;color:#07C}a:hover{background:#07C;color:#FFF}
+body{font-family:"Raleway","Segoe UI",sans-serif;font-size:16px;-webkit-font-rendering:optimizeLegibility;-moz-font-rendering:optimizeLegibility;-ms-font-rendering:optimizeLegibility;-o-font-rendering:optimizeLegibility;font-rendering:optimizeLegibility;margin:0;opacity:0}
+.loaded{opacity:1;-webkit-transition:opacity .5s ease;-moz-transition:opacity .5s ease;-ms-transition:opacity .5s ease;-o-transition:opacity .5s ease;transition:opacity .5s ease}
+header{position:fixed;bottom:0;left:0;background:#fff;z-index:5;width:100%;-webkit-transition:bottom .5s ease;-moz-transition:bottom .5s ease;-o-transition:bottom .5s ease;-ms-transition:bottom .5s ease;transition:bottom .5s ease}
+nav{position:relative;color:#222;width:800px;margin:0 auto;text-transform:capitalize;font-size:0;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+.hidden{bottom:-50px}nav>a{float:left;font:700 12pt/50px "Raleway";text-align:center;text-decoration:none;color:#222;margin-right:5em;-webkit-transition:color .2s;-moz-transition:color .2s;-o-transition:color .2s;-ms-transition:color .2s;transition:color .2s}
+nav>a:hover{color:#469;background:transparent}nav>a:active{color:#000}nav>a:first-child,nav>.back+a{text-align:left}nav>a:last-child{text-align:right}
+nav>.back:first-child{position:fixed;left:0;width:24px;height:24px;line-height:24px;margin-top:13px;margin-left:13px;background:#333;color:#fff;text-align:center;border-radius:100%}
+nav>.back:hover{color:#AAA}nav a.home{text-align:right;float:right;text-transform:uppercase;margin-right:0}#content{max-width:100%;padding:0 0 50px 0}
+.words{display:block;position:relative;margin:0 auto;margin-bottom:1em;padding-top:8px;max-width:800px;font:1em "Quattrocento",serif}
+@media print,screen and (max-width:900px){h1{float:none;clear:none;width:auto;text-align:inherit}}@media screen and (max-width:800px){#content{padding:0 30px 50px 30px}
+.words{max-width:100%}nav{width:100%;left:0;padding:0 30px}nav>a,nav>.back+a,nav>a:first-child,nav>a:last-child{text-align:center}}@media screen and (max-width:600px){nav>a{margin-right:2em}
+}@media screen and (max-width:400px){nav a.home{display:none}nav{white-space:nowrap}nav>a{margin-right:0;width:33.3%}}

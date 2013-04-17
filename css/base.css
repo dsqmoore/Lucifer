@@ -15,16 +15,15 @@
     src: local("Nonexistent 1442"), url(../fonts/Quattrocento-Regular-webfont.svg) format("svg"), url(../fonts/Quattrocento-Regular-webfont.ttf) format("truetype"), local("Georgia"), local("Minion Pro"), local("Times New Roman");
 }
 
-html {
-    opacity: 0;
-}
-
 .loaded {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
     opacity: 1;
+
     -webkit-transition: all 0.75s ease-in;
     -moz-transition: all 0.75s ease-in;
-    -ms-transition: all 0.75s ease-in;
     -o-transition: all 0.75s ease-in;
+    -ms-transition: all 0.75s ease-in;
     transition: all 0.75s ease-in;
 }
 
@@ -40,15 +39,14 @@ html {
     user-select: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,h2,h3,h4,h5,h6 {
     font-family: "Raleway", "Segoe UI", Arial, Helvetica, sans-serif;
 }
 
 h1 {
     text-align: center;
-    margin: 0 auto;
-    width: 600px;
-    max-width: 100%;
+    margin: 0px auto;
+    width: 800px;
     font-size: 3em;
 }
 
@@ -67,14 +65,38 @@ a:hover {
     color: #FFF;
 }
 
+a:active {
+    background: #059;
+}
+
 body {
     font-family: "Raleway", "Segoe UI", sans-serif;
+    font-size: 16px;
     -webkit-font-rendering: optimizeLegibility;
     -moz-font-rendering: optimizeLegibility;
     -ms-font-rendering: optimizeLegibility;
     -o-font-rendering: optimizeLegibility;
     font-rendering: optimizeLegibility;
+    -webkit-font-feature-settings: "lnum", "dlig", "liga";
+    -moz-font-feature-settings: "lnum", "dlig", "liga";
+    -ms-font-feature-settings: "lnum", "dlig", "liga";
+    font-feature-settings: "lnum", "dlig", "liga";
     margin: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+
+.loaded {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
 }
 
 header {
@@ -95,10 +117,15 @@ header {
 nav {
     position: relative;
     color: #222;
-    width: 600px;
+    width: 800px;
     margin: 0 auto;
     text-transform: capitalize;
     font-size: 0;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
 
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -111,12 +138,12 @@ nav {
 }
 
 nav > a {
-    width: 33.33%;
     float: left;
     font: 700 12pt/50px "Raleway";
     text-align: center;
     text-decoration: none;
     color: #222;
+    margin-right: 5em;
 
     -webkit-transition: color 0.2s;
     -moz-transition: color 0.2s;
@@ -134,7 +161,7 @@ nav > a:active {
     color: #000;
 }
 
-nav > a:first-child, nav > .back + a {
+nav > a:first-child,nav > .back + a {
     text-align: left;
 }
 
@@ -142,21 +169,11 @@ nav > a:last-child {
     text-align: right;
 }
 
-nav > .back:first-child {
-    position: fixed;
-    left: 0;
-    width: 24px;
-    height: 24px;
-    line-height: 24px;
-    margin-top: 13px;
-    margin-left: 13px;
-    background: #333;
-    color: #fff;
-    text-align: center;
-    border-radius: 100%;
-}
-nav > .back:hover {
-    color: #AAA;
+nav a.home {
+    text-align: right;
+    float: right;
+    text-transform: uppercase;
+    margin-right: 0;
 }
 
 #content {
@@ -170,26 +187,60 @@ nav > .back:hover {
     margin: 0 auto;
     margin-bottom: 1em;
     padding-top: 8px;
-    max-width: 600px;
-    font: 16px/26px "Quattrocento", serif;
+    max-width: 800px;
+    font: 1em "Quattrocento", serif;
+}
+
+@media print,screen and (max-width: 900px) {
+    h1 {
+    float: none;
+    clear: none;
+    width: auto;
+    text-align: inherit;
+}
+
+#content {
+    padding: 0 30px 50px 30px;
+}
+
 }
 
 @media screen and (max-width: 800px) {
-    #content {
-        padding: 0 30px 50px 30px;
-    }
     .words {
-        max-width: 100%;
-    }
-    nav {
-        width: 100%;
-        left: 0;
-    }
-    nav > a, nav > .back + a, nav > a:first-child, nav > a:last-child {
-        float: left;
-        text-align: center;
-    }
-    nav > .back:first-child {
-        left: 0;
-    }
+    max-width: 100%;
+}
+
+nav {
+    width: 100%;
+    left: 0;
+    padding: 0 30px;
+}
+
+nav > a,nav > .back + a,nav > a:first-child,nav > a:last-child {
+    text-align: center;
+}
+
+}
+
+@media screen and (max-width: 600px) {
+    nav > a {
+    margin-right: 2em;
+}
+
+}
+
+@media screen and (max-width: 400px) {
+    nav a.home {
+    display: none;
+}
+
+nav {
+    white-space: nowrap;
+}
+
+nav > a {
+    margin-right: 0;
+    width: 33.3%;
+}
+
 }
