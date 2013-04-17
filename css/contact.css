@@ -1,11 +1,11 @@
 #content {
-    padding-top: 30px;
+    max-width: 800px;
+    margin: 30px auto;
 }
 
 #contact {
-    max-width: 800px;
     width: 100%;
-    margin: 30px auto;
+    padding-top: 30px;
 }
 
 #contact td:first-child {
