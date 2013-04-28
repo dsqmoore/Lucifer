@@ -39,7 +39,7 @@ function send() {
             if (data !== "true" && data !== "sent") {
                 var index = data.indexOf("Message was not sent");
                 if (index !== -1) {
-                    $(".sent").html("<h3>Oh no! An error occured</h3>Please try later, or if the problem persists, let us know by emailing us directly.").show();
+                    $(".sent").html("<h3>Oh no! An error occurred</h3>Please try later, or if the problem persists, let us know by emailing us directly.").show();
                     $("form").css({
                         "top": -$(".form").height() + $(".sent").height(),
                         "margin-bottom": -$(".form").height() + $(".sent").height(),
