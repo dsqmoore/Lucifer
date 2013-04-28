@@ -25,11 +25,19 @@
 form {
     margin: 0;
     padding: 0;
+    position: relative;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
 }
 
 .form {
     padding-right: 30px;
     min-width: 300px;
+    overflow: auto;
+    vertical-align: top;
 }
 
 .form input,.form textarea {
@@ -73,6 +81,17 @@ form {
     opacity: 0.5;
     color: #555;
     cursor: default;
+}
+
+.sent {
+    display: none;
+    opacity: 0;
+    font-family: "Quattrocento";
+    -webkit-transition: opacity 0.2s ease-out;
+    -moz-transition: opacity 0.2s ease-out;
+    -ms-transition: opacity 0.2s ease-out;
+    -o-transition: opacity 0.2s ease-out;
+    transition: opacity 0.2s ease-out;
 }
 
 .links {
@@ -190,6 +209,35 @@ form {
    left: 0;
  }
 
+}
+
+.strobe {
+    -webkit-animation: strobe 1s 1s ease 5;
+    -moz-animation: strobe 1s 1s ease 5;
+    -ms-animation: strobe 1s 1s ease 5;
+    -o-animation: strobe 1s 1s ease 5;
+    animation: strobe 1s 1s ease 5;
+}
+
+@-webkit-keyframes strobe {
+    from { background: #EEE; }
+    50% { background: #FFF; }
+    to { background: #EEE; }
+}
+@-o-keyframes strobe {
+    from { background: #EEE; }
+    50% { background: #FFF; }
+    to { background: #EEE; }
+}
+@-moz-keyframes strobe {
+    from { background: #EEE; }
+    50% { background: #FFF; }
+    to { background: #EEE; }
+}
+@keyframes strobe {
+    from { background: #EEE; }
+    50% { background: #FFF; }
+    to { background: #EEE; }
 }
 
 .post {

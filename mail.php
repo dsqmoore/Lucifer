@@ -1,6 +1,6 @@
 <?php
 
-ini_set('display_errors','On');
+ini_set('display_errors','Off');
 error_reporting(E_ALL);
 
 $email   = $_POST["email"];
@@ -23,14 +23,13 @@ if (!$mxhosts) {
     echo "true";
     return;
 } else {
-    echo "true";
-
     $to      = 'notrtq@gmail.com';
     $subject = $name . " sent a message";
     $headers = 'From: "' . $name . '" <' . $email . '>' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
     if (mail($to,$subject,$message,$headers)) {
+        echo "sent";
         return;
     } else {
         die("Message was not sent");
