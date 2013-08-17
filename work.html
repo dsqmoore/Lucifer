@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html lang="en-us" class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html lang="en-us" class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html lang="en-us" class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-us"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>Work &bull; Codeq</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/work.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/about">About</a>
+            <a href="/work">Work</a>
+            <a href="/contact">Contact</a>
+            <a href="/" class="home">Codeq</a>
+        </nav>
+    </header>
+    <div id="content">
+        <h1>What we&rsquo;re working on</h1>
+        <div id="work" class="ns hyphenate">
+            <div class="cell r1">
+                <article>
+                    <h3>Plain</h3>
+                    <p>A simple, intuitive, and functional template for faculty. And did we mention that it's free?</p>
+                    <p>Feel free to <a href="/contact">contact us</a> for a copy.</p>
+                </article>
+                <img src="images/wats.jpg" class="tall">
+            </div>
+            <div class="cell r1"><img src="images/text.jpg"></div>
+            <div class="cell r2"><img src="images/working.jpg" class="tall"></div>
+            <div class="cell r1 c2"><img src="images/inspect.jpg"></div>
+        </div>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="js/hyphenator.js"></script>
+    <script>
+        function masonry() {
+            $("#work .cell.r1").height($("#work").width()/3 - 16);
+            $("#work .cell.r2").height($("#work").width()/3*2 - 16);
+        };
+
+        $(document).ready(masonry);
+        $(window).resize(masonry);
+    </script>
+    <script src="js/base.js"></script>
+</body>
+</html>

@@ -7,10 +7,10 @@ $email   = $_POST["email"];
 $name    = $_POST["name"];
 $message = $_POST["message"];
 
-if (preg_match_all("/(\.\w{2,5})/", $email) && $pos = strpos($email, "@")) {
+if (preg_match_all("/(\.\w{2,5})/", $email, $inst) && $pos = strpos($email, "@")) {
     $host = substr($email, $pos + 1);
 } else {
-    echo "false";
+    echo $email;
     return false;
 }
 
