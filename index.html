@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--[if lt IE 7]> <html lang="en-us" class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>    <html lang="en-us" class="lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>    <html lang="en-us" class="lt-ie9"> <![endif]-->
@@ -7,6 +7,8 @@
     <meta charset="utf-8">
     <title>Codeq</title>
     <meta name="viewport" content="width=device-width">
+    <meta name="description" content="We are Codeq, a design and development team commited to a better web. Codeq is a student-run, non-profit web design agency based at UBC Vancouver and officially constituted as an AMS student club. We offer web design services to other AMS clubs to provide them with a stronger web presence.">
+    <meta name="keywords" content="Codeq,web design,club,design,UBC,AMS,university,better,simple,development,presence,agency,student-run,non-profit">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/landing.css">
 </head>
@@ -15,10 +17,10 @@
     <div id="title" class="ns"><span>A better web</span></div>
     <header>
         <nav>
-            <a href="about.html">About</a>
-            <a href="#">Work</a>
-            <a href="contact.html">Contact</a>
-            <a href="./" class="home">Codeq</a>
+            <a href="/about">About</a>
+            <a href="/work">Work</a>
+            <a href="/contact">Contact</a>
+            <a href="#" class="home">Codeq</a>
         </nav>
     </header>
     <div id="hold">
@@ -33,7 +35,7 @@
                 <h1>We are Codeq.</h1>
                 <h2>A design and development team commited to a better web.</h2>
                 <p>
-                    Lorem ipsum dolor sit amet, eu nam paulo vitae oratio. Et nec veri equidem. Fastidii platonem ullamcorper his ut, te nibh paulo utroque mel. Cu facilisis splendide sea, ex augue movet eleifend sed. Duis veritus delicatissimi in nam.
+                    Codeq is a student-run, non-profit web design agency based at UBC Vancouver and officially constituted as an AMS student club. We offer web design services to other AMS clubs to provide them with a stronger web presence. Pricing for these projects are based on the client's budget as well as the complexity of the site.
                 </p>
             </span>
         </div>
@@ -44,13 +46,12 @@
     <script>
     function masonry() {
         $("#work .cell.r1").height($("#work").width()/3 - 16);
-        $("#work .cell.r2").height($("#work").width()/3*2 - 32);
+        $("#work .cell.r2").height($("#work").width()/3*2 - 16);
     };
 
     $(document).ready(masonry);
     $(window).resize(masonry);
     </script>
     <script src="js/hyphenator.js"></script>
-    <script src="js/base.js"></script>
 </body>
 </html>
